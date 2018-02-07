@@ -1,0 +1,7 @@
+C:\Users\mario\Documents\devCodeCamp\Projects\4 - Rock Paper Scissor Lizard Spock\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.exe.config
+C:\Users\mario\Documents\devCodeCamp\Projects\5 - Lemonade Stand\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.exe.config
+C:\Users\mario\Documents\devCodeCamp\Projects\5 - Lemonade Stand\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.csprojResolveAssemblyReference.cache
+C:\Users\mario\Documents\devCodeCamp\Projects\5 - Lemonade Stand\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.exe
+C:\Users\mario\Documents\devCodeCamp\Projects\5 - Lemonade Stand\LemonadeStand\LemonadeStand\bin\Debug\LemonadeStand.pdb
+C:\Users\mario\Documents\devCodeCamp\Projects\5 - Lemonade Stand\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.exe
+C:\Users\mario\Documents\devCodeCamp\Projects\5 - Lemonade Stand\LemonadeStand\LemonadeStand\obj\Debug\LemonadeStand.pdb
