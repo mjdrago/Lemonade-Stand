@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class UI
+    public class UI
     {
         public string GetStringInput(string DisplayText)
         {
@@ -27,7 +27,7 @@ namespace LemonadeStand
             catch (Exception)
             {
                 Console.WriteLine("This was not a valid entry. Please try again.");
-                GetIntInput(DisplayText);
+                intOutput = GetIntInput(DisplayText);
             }
             return intOutput;
         }

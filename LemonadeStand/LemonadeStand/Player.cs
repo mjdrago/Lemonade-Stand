@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Player
+    public abstract class Player
     {
+        public string name;
+        Inventory LemonadeSupplies;
+        UI interactions = new UI();
+
     }
 }

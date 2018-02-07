@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Program
+    class Human:Player
     {
-        static void Main(string[] args)
+        public Human()
         {
-            Game round = new Game();
-            round.GetPlayers();
-            Console.ReadKey();
+            name = interactions.GetStringInput("Please enter your name:");
+            money = 25;
         }
     }
 }

@@ -9,6 +9,7 @@ namespace LemonadeStand
     class Game
     {
         UI interaction = new UI();
+        List<Player> players = new List<Player>();
         public void GamePlay()
         {
             //Display Intro Screen
@@ -18,9 +19,14 @@ namespace LemonadeStand
 
         }
 
-        private void GetPlayers()
+        public void GetPlayers()
         {
-            int NumberOfPlayer = GetNumberOfPlayers();
+            int numberOfPlayers = GetNumberOfPlayers();
+            for (int i = 0; i < numberOfPlayers; i++)
+            {
+                Human inputPlayer = new Human();
+                players.Add(inputPlayer);
+            }
         }
 
         private int GetNumberOfPlayers()
