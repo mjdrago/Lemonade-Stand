@@ -11,7 +11,7 @@ namespace LemonadeStand
         static void Main(string[] args)
         {
             Game round = new Game();
-            round.GetPlayers();
+            round.GetTotalDays();
             Console.ReadKey();
         }
     }
