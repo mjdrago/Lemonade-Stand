@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Supply
+    class Store
     {
-        int quantity;
-        decimal price;
-
-        public void UseItem(int neededSupplies)
+        public void SellSupplies(Supply ItemToSell)
         {
-            quantity -= neededSupplies;
+
         }
     }
 }

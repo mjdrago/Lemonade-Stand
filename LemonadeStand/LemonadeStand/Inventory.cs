@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Inventory
+    public class Inventory
     {
+        List<Supply> supplies;
+        public Inventory()
+        {
+            supplies = new List<Supply>();
+
+        }
     }
 }
