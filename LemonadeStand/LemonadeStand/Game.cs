@@ -10,7 +10,9 @@ namespace LemonadeStand
     {
         UI interaction = new UI();
         List<Player> players = new List<Player>();
+        Random generator = new Random();
         int gameLength;
+        public Day currentDay;
 
         public void GamePlay()
         {
@@ -65,7 +67,14 @@ namespace LemonadeStand
 
         private void RunThroughDays()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < gameLength; i++)
+            {
+                currentDay = new Day(generator);
+                foreach (Player activePlayer in players)
+                {
+                    currentDay.DaysAction(activePlayer);
+                }
+            }
         }
 
         private void RecordToHighScore()

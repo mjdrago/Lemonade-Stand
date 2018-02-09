@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Store
+    class Lemon: Item
     {
-        
+        public Lemon()
+        {
+            name = "Lemon";
+            price = .10;
+        }
     }
 }

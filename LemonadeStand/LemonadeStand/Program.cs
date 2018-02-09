@@ -10,8 +10,12 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
-            Game round = new Game();
-            round.GetTotalDays();
+            //Game round = new Game();
+            //round.GetTotalDays();
+            //Console.ReadKey();
+            Cup foo = new Cup();
+            Console.WriteLine(foo.GetName());
+            Console.WriteLine(foo.GetPrice());
             Console.ReadKey();
         }
     }

@@ -9,9 +9,8 @@ namespace LemonadeStand
     public abstract class Player
     {
         public string name;
-        Inventory LemonadeSupplies;
+        public Inventory lemonadeSupplies;
         public UI interactions = new UI();
         public decimal money;
-
     }
 }

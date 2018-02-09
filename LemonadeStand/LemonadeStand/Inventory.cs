@@ -8,11 +8,16 @@ namespace LemonadeStand
 {
     public class Inventory
     {
-        List<Supply> supplies;
+        List<Lemon> lemons;
+        List<SugarCube> sugarCubes;
+        List<IceCube> iceCubes;
+        List<Cup> cups;
         public Inventory()
         {
-            supplies = new List<Supply>();
-
+            lemons = new List<Lemon>();
+            sugarCubes = new List<SugarCube>();
+            iceCubes = new List<IceCube>();
+            cups = new List<Cup>();
         }
     }
 }

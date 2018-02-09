@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Supply
+    class SugarCube: Item
     {
-        int quantity;
-        decimal price;
-
-        public void UseItem(int neededSupplies)
+        public SugarCube()
         {
-            quantity -= neededSupplies;
+            name = "Sugar Cube";
+            price = .10;
         }
     }
 }
