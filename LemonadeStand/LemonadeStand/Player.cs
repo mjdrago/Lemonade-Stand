@@ -10,7 +10,8 @@ namespace LemonadeStand
     {
         public string name;
         public Inventory lemonadeSupplies;
-        public UI interactions = new UI();
-        public decimal money;
+        public UI interactions;
+        public Wallet fund;
+
     }
 }

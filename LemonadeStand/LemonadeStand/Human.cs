@@ -10,8 +10,10 @@ namespace LemonadeStand
     {
         public Human()
         {
+            interactions = new UI();
             name = interactions.GetStringInput("Please enter your name:");
-            money = 25;
+            lemonadeSupplies = new Inventory();
+            fund = new Wallet();
         }
     }
 }
