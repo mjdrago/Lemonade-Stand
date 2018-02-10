@@ -9,13 +9,13 @@ namespace LemonadeStand
     public class Inventory
     {
         List<Lemon> lemons;
-        List<SugarCube> sugarCubes;
+        List<Sugar> sugar;
         List<IceCube> iceCubes;
         List<Cup> cups;
         public Inventory()
         {
             lemons = new List<Lemon>();
-            sugarCubes = new List<SugarCube>();
+            sugar = new List<Sugar>();
             iceCubes = new List<IceCube>();
             cups = new List<Cup>();
         }
@@ -24,7 +24,7 @@ namespace LemonadeStand
         {
             Console.WriteLine("Your current supplies are:");
             Console.WriteLine(" - Lemons: {0}",lemons.Count);
-            Console.WriteLine(" - Sugar Cubes: {0}", sugarCubes.Count);
+            Console.WriteLine(" - Cups of Sugar: {0}", sugar.Count);
             Console.WriteLine(" - Ice Cubes: {0}", iceCubes.Count);
             Console.WriteLine(" - Cups: {0}", cups.Count);
         }
@@ -39,8 +39,8 @@ namespace LemonadeStand
         public void BuySugar(int numberNeeded, Wallet money)
         {
             Store grocer = new Store();
-            List<SugarCube> boughtSugar = grocer.SellSugar(numberNeeded, money);
-            sugarCubes.AddRange(boughtSugar);
+            List<Sugar> boughtSugar = grocer.SellSugar(numberNeeded, money);
+            sugar.AddRange(boughtSugar);
         }
 
         public void BuyIce(int numberNeeded, Wallet money)

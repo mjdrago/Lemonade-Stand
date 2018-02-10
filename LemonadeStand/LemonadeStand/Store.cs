@@ -27,20 +27,20 @@ namespace LemonadeStand
             }
             return lemons;
         }
-        public List<SugarCube> SellSugar(int sugarNeeded, Wallet money)
+        public List<Sugar> SellSugar(int sugarNeeded, Wallet money)
         {
-            List<SugarCube> sugar = new List<SugarCube>();
+            List<Sugar> sugar = new List<Sugar>();
 
             for (int i = 0; i < sugarNeeded; i++)
             {
-                SugarCube newSugar = new SugarCube();
+                Sugar newSugar = new Sugar();
                 if (money.WithdrawMoney(newSugar.GetPrice()))
                 {
                     sugar.Add(newSugar);
                 }
                 else
                 {
-                    Console.WriteLine("You were only able to buy {0} sugar cubes with your available funds.", i);
+                    Console.WriteLine("You were only able to buy {0} cups of sugar with your available funds.", i);
                     break;
                 }
             }

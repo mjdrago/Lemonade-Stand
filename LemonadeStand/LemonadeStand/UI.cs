@@ -19,10 +19,24 @@ namespace LemonadeStand
         {
             string stringInput = GetStringInput(DisplayText);
             int intOutput = 0;
-            bool CanConvert = Int32.TryParse(stringInput, out intOutput);
             try
             {
                 intOutput = Int32.Parse(stringInput);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("This was not a valid entry. Please try again.");
+                intOutput = GetIntInput(DisplayText);
+            }
+            return intOutput;
+        }
+        public double GetDoubletInput(string DisplayText)
+        {
+            string stringInput = GetStringInput(DisplayText);
+            double intOutput = 0;
+            try
+            {
+                intOutput = double.Parse(stringInput);
             }
             catch (Exception)
             {

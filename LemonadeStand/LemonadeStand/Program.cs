@@ -34,7 +34,7 @@ namespace LemonadeStand
             Human test = new Human();
 
             Day crr = new Day(generator);
-            crr.BuySupplies(test);
+            crr.PreSellActions(test);
             test.DisplayPlayerConditions();
             Console.ReadKey();
 

@@ -14,6 +14,8 @@ namespace LemonadeStand
             name = interactions.GetStringInput("Please enter your name:");
             lemonadeSupplies = new Inventory();
             fund = new Wallet();
+            recipe = new LemonadeRecipe();
+            lemonadeCost = .25;
         }
     }
 }

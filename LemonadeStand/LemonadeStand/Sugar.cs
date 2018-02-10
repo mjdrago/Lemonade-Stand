@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class SugarCube: Item
+    class Sugar: Item
     {
-        public SugarCube()
+        public Sugar()
         {
             name = "Sugar Cube";
             price = .10;
