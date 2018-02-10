@@ -13,5 +13,11 @@ namespace LemonadeStand
         public UI interactions;
         public Wallet fund;
 
+        public void DisplayPlayerConditions()
+        {
+            lemonadeSupplies.DisplayInventory();
+            fund.DisplayBalance();
+        }
+
     }
 }

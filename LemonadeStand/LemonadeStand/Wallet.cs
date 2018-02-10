@@ -19,6 +19,10 @@ namespace LemonadeStand
         {
             return balance;
         }
+        public void DisplayBalance()
+        {
+            Console.WriteLine("Funds: {0}",balance);
+        }
 
         public bool WithdrawMoney(double amountNeeded)
         {
