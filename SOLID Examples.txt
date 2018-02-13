@@ -1,0 +1,7 @@
+Wallet Class and Inventory Class follow the first SOLID principle of SRP. They only perform and control task relating to
+what they represent. The Wallet only deposits and withdraws money from the balance and only when there is money available
+to withdraw. It keeps a running balance of how much money is in there. The inventory keeps tracks of a number of supplies,
+as well as buying and using what is in the inventory.
+
+The Item and its child classes follow the Liskove Substitution Principle as there is nothing the parent class can do that
+the child class can't.
