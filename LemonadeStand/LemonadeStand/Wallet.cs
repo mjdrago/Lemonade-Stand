@@ -33,5 +33,10 @@ namespace LemonadeStand
             }
             return false;
         }
+
+        public void DepositMoney(double amount)
+        {
+            balance += amount;
+        }
     }
 }

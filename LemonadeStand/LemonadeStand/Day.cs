@@ -23,7 +23,7 @@ namespace LemonadeStand
         public void DaysAction(Player activePlayer)
         {
             PreSellActions(activePlayer);
-            SellLemonade();
+            SellingLemonade(activePlayer);
         }
         public void PreSellActions(Player activePlayer)
         {
@@ -138,9 +138,18 @@ namespace LemonadeStand
             }
         }
 
-        public void CreateCustomer()
+        public void SellingLemonade(Player activePlayer)
         {
-
+            for (int i = 0; i < totalNumberOfCustomers; i++)
+            {
+                Customer currentBuyer = new Customer(generator);
+                currentBuyer.GetFinalCostWillingToPay(currentWeather, activePlayer.lemonadeCost);
+                bool continueLookingAtCustomers = activePlayer.SellLemonade(currentBuyer);
+                if (continueLookingAtCustomers == false)
+                {
+                    break;
+                }
+            }
         }
         private void SellLemonade()
         {

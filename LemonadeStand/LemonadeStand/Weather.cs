@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Weather
+    public class Weather
     {
         int temperature;
-        int conditionReference;
-        string conditionText;
         Random generator;
         public Weather(Random generator)
         {
@@ -19,21 +17,15 @@ namespace LemonadeStand
         public void DetermineWeather()
         {
             GenerateTemperature();
-            GenerateConditionReference();
-            GetConditionText();
         }
         private void GenerateTemperature()
         {
-
+            temperature = generator.Next(55, 96);
         }
-        private void GenerateConditionReference()
+        
+        public int GetWeather()
         {
-
-        }
-
-        private void GetConditionText()
-        {
-
+            return temperature;
         }
     }
 }

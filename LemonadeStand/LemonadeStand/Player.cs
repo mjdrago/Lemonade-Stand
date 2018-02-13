@@ -42,8 +42,8 @@ namespace LemonadeStand
         public bool MakeCupsOfLemonade()
         {
             bool madeCups;
-            if (lemonadeSupplies.GetSugarAmount() == recipe.GetSugarInRecipe()
-                && lemonadeSupplies.GetLemonAmount() == recipe.GetLemonsInRecipe())
+            if (lemonadeSupplies.GetSugarAmount() >= recipe.GetSugarInRecipe()
+                && lemonadeSupplies.GetLemonAmount() >= recipe.GetLemonsInRecipe())
             {
                 cupsOfLemonade = 12;
                 lemonadeSupplies.UseLemons(recipe.GetLemonsInRecipe());
@@ -56,6 +56,74 @@ namespace LemonadeStand
             }
             
             return madeCups;
+        }
+        public bool PourLemonade()
+        {
+            bool pouredLemonade;
+            if (lemonadeSupplies.GetIceCubeAmount() >= recipe.GetIceInRecipe()
+                && lemonadeSupplies.GetCupAmount() >= 1)
+            {
+                cupsOfLemonade -= 1;
+                lemonadeSupplies.UseIceCube(recipe.GetIceInRecipe());
+                lemonadeSupplies.UseCup(1);
+                pouredLemonade = true;
+            }
+            else
+            {
+                pouredLemonade = false;
+            }
+            return pouredLemonade;
+        }
+        public bool SellLemonade(Customer buyer)
+        {
+            if (cupsOfLemonade == 0)
+            {
+                if (MakeCupsOfLemonade() == true)
+                {
+                    if (buyer.BuyLemonade(lemonadeCost) == true)
+                    {
+                        if (PourLemonade() == true)
+                        {
+                            fund.DepositMoney(lemonadeCost);
+                            return true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("No more lemonade to sell.");
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No more lemonade to sell.");
+                    return false;
+                }
+            }
+            else
+            {
+                if (buyer.BuyLemonade(lemonadeCost) == true)
+                {
+                    if (PourLemonade() == true)
+                    {
+                        fund.DepositMoney(lemonadeCost);
+                        return true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("No more lemonade to sell.");
+                        return false;
+                    }
+                }
+                else
+                {
+                    return true;
+                }
+            }
         }
     }
 }
