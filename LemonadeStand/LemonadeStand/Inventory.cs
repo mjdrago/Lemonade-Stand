@@ -57,9 +57,49 @@ namespace LemonadeStand
             cups.AddRange(boughtCups);
         }
 
-        public void UseItems(int numberNeeded)
+        public int GetLemonAmount()
         {
-
+            return lemons.Count;
+        }
+        public int GetSugarAmount()
+        {
+            return sugar.Count;
+        }
+        public int GetIceCubeAmount()
+        {
+            return iceCubes.Count;
+        }
+        public int GetCupAmount()
+        {
+            return cups.Count;
+        }
+        public void UseLemons(int numberUsed)
+        {
+            for (int i = 0; i < numberUsed; i++)
+            {
+                lemons.RemoveAt(lemons.Count);
+            }
+        }
+        public void UseSugar(int numberUsed)
+        {
+            for (int i = 0; i < numberUsed; i++)
+            {
+                sugar.RemoveAt(lemons.Count);
+            }
+        }
+        public void UseIceCube(int numberUsed)
+        {
+            for (int i = 0; i < numberUsed; i++)
+            {
+                iceCubes.RemoveAt(lemons.Count);
+            }
+        }
+        public void UseCup(int numberUsed)
+        {
+            for (int i = 0; i < numberUsed; i++)
+            {
+                cups.RemoveAt(lemons.Count);
+            }
         }
     }
 }

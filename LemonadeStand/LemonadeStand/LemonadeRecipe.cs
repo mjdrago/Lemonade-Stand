@@ -38,5 +38,17 @@ namespace LemonadeStand
             Console.WriteLine(" - {0} ice cubes per cup served.", iceCubes);
         }
 
+        public int GetLemonsInRecipe()
+        {
+            return lemons;
+        }
+        public int GetSugarInRecipe()
+        {
+            return sugar;
+        }
+        public int GetIceInRecipe()
+        {
+            return iceCubes;
+        }
     }
 }

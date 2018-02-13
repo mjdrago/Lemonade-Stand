@@ -14,6 +14,7 @@ namespace LemonadeStand
         public Wallet fund;
         public LemonadeRecipe recipe;
         public double lemonadeCost;
+        public int cupsOfLemonade;
 
         public void DisplayPlayerConditions()
         {
@@ -38,6 +39,23 @@ namespace LemonadeStand
         {
             lemonadeCost = desiredCost;
         }
-
+        public bool MakeCupsOfLemonade()
+        {
+            bool madeCups;
+            if (lemonadeSupplies.GetSugarAmount() == recipe.GetSugarInRecipe()
+                && lemonadeSupplies.GetLemonAmount() == recipe.GetLemonsInRecipe())
+            {
+                cupsOfLemonade = 12;
+                lemonadeSupplies.UseLemons(recipe.GetLemonsInRecipe());
+                lemonadeSupplies.UseSugar(recipe.GetSugarInRecipe());
+                madeCups = true;
+            }
+            else
+            {
+                madeCups = false;
+            }
+            
+            return madeCups;
+        }
     }
 }

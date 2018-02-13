@@ -68,19 +68,19 @@ namespace LemonadeStand
                 switch (input)
                 {
                     case "1":
-                        numberNeeded = standOwner.interactions.GetIntInput("How many lemons would you like to buy?");
+                        numberNeeded = standOwner.interactions.GetIntMininumValue("How many lemons would you like to buy?", 0);
                         standOwner.lemonadeSupplies.BuyLemons(numberNeeded, standOwner.fund);
                         break;
                     case "2":
-                        numberNeeded = standOwner.interactions.GetIntInput("How many cups of sugar would you like to buy?");
+                        numberNeeded = standOwner.interactions.GetIntMininumValue("How many cups of sugar would you like to buy?", 0);
                         standOwner.lemonadeSupplies.BuySugar(numberNeeded, standOwner.fund);
                         break;
                     case "3":
-                        numberNeeded = standOwner.interactions.GetIntInput("How many ice cubes would you like to buy?");
+                        numberNeeded = standOwner.interactions.GetIntMininumValue("How many ice cubes would you like to buy?", 0);
                         standOwner.lemonadeSupplies.BuyIce(numberNeeded, standOwner.fund);
                         break;
                     case "4":
-                        numberNeeded = standOwner.interactions.GetIntInput("How many cups would you like to buy?");
+                        numberNeeded = standOwner.interactions.GetIntMininumValue("How many cups would you like to buy?", 0);
                         standOwner.lemonadeSupplies.BuyCups(numberNeeded, standOwner.fund);
                         break;
                     case "5":
@@ -115,15 +115,15 @@ namespace LemonadeStand
                         standOwner.SetCostOfLemonade(price);
                         break;
                     case "2":
-                        amount = standOwner.interactions.GetIntInput("How many lemons would you like per pitcher?");
+                        amount = standOwner.interactions.GetIntMininumValue("How many lemons would you like per pitcher?", 0);
                         standOwner.recipe.ChangeLemons(amount);
                         break;
                     case "3":
-                        amount = standOwner.interactions.GetIntInput("How many cups of sugar would you like per pitcher?");
+                        amount = standOwner.interactions.GetIntMininumValue("How many cups of sugar would you like per pitcher?", 0);
                         standOwner.recipe.ChangeSugar(amount);
                         break;
                     case "4":
-                        amount = standOwner.interactions.GetIntInput("How many ice cubes would you like per cup?");
+                        amount = standOwner.interactions.GetIntMininumValue("How many ice cubes would you like per cup?",0 );
                         standOwner.recipe.ChangeIceCubes(amount);
                         break;
                     case "5":
@@ -138,6 +138,10 @@ namespace LemonadeStand
             }
         }
 
+        public void CreateCustomer()
+        {
+
+        }
         private void SellLemonade()
         {
             throw new NotImplementedException();

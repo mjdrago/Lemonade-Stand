@@ -30,15 +30,24 @@ namespace LemonadeStand
             //foo.DisplayInventory();
             //Console.WriteLine(mfoo.GetBalance());
             //Console.ReadKey();
-            Random generator = new Random();
-            Human test = new Human();
+            //Random generator = new Random();
+            //Human test = new Human();
 
-            Day crr = new Day(generator);
-            crr.PreSellActions(test);
-            test.DisplayPlayerConditions();
+            //Day crr = new Day(generator);
+            //crr.PreSellActions(test);
+            //test.DisplayPlayerConditions();
+            //Console.ReadKey();
+            //UI foo = new UI();
+            //int n =foo.GetIntMininumValue("Please enter a number greater than 5", 5);
+            //Console.WriteLine("arrrr {0}",n);
+            //Console.ReadKey();
+            Random genera = new Random();
+            Customer foo = new Customer(genera);
+            Console.WriteLine(foo.GetCostWillingToPay());
+            foo = new Customer(genera);
+            Console.WriteLine(foo.GetCostWillingToPay());
             Console.ReadKey();
 
-            
         }
     }
 }
